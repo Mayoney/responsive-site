@@ -1,0 +1,121 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+header .top_photo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* main
+------------------------------------------------------------*/
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+.box {
+  border: solid 1px skyblue;
+  margin: 10px;
+  flex: 1;
+}
+.title_box {
+    border-bottom: solid 1px skyblue;
+}
+.box p {
+    text-align: center;
+}
+
+.text_box {
+    height: 150px;
+}
+
+/* footer
+------------------------------------------------------------*/
+footer {
+  background-color: #708090;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+.btn {
+  margin: 15px auto;
+  text-align: center;
+  padding: 5px 0;
+  width: 180px;
+  display: block;
+  color: #FFF;
+  background-color: #b0c4de;
+  @include border-radius(4px);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
