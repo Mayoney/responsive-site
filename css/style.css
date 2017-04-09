@@ -14,14 +14,7 @@ body {
   background-color: #fdfcf6; }
 
 a {
-  color: #14c0c9;
   text-decoration: none; }
-  a:visited {
-    color: #0f949b; }
-  a:hover {
-    color: #0f949b; }
-  a:active {
-    color: #16d6e0; }
 
 h1 {
   display: block;
@@ -55,9 +48,10 @@ h1 {
 
 /* Header
 ------------------------------------------------------------*/
-header .top_photo {
-  max-width: 100%;
-  height: auto; }
+header {
+  height: 500px;
+  background-image: url(../img/kamako.jpg);
+  background-size: cover; }
 
 /* main
 ------------------------------------------------------------*/
@@ -67,12 +61,12 @@ header .top_photo {
   margin-bottom: 30px; }
 
 .box {
-  border: solid 1px skyblue;
+  border: solid 1px #b0c4de;
   margin: 10px;
   flex: 1; }
 
 .title_box {
-  border-bottom: solid 1px skyblue; }
+  border-bottom: solid 1px #b0c4de; }
 
 .box p {
   text-align: center; }
@@ -95,12 +89,12 @@ footer {
   width: 180px;
   display: block;
   color: #FFF;
-  background-color: #b0c4de;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px; }
+  background-color: #b0c4de; }
 
 @media (max-width: 768px) {
+  header {
+    height: 250px; }
+
   .container {
     flex-direction: column; } }
 

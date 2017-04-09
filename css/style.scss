@@ -1,6 +1,5 @@
-@import "compass";
+// @import "compass";
 @import url(https://fonts.googleapis.com/css?family=Abel);
-
 // font-family
 $baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
@@ -9,6 +8,7 @@ $baseColor: #fdfcf6;
 $subColor: #bea300;
 $keyColor: #14c0c9;
 $fontColor: #4c4c4c;
+
 
 /* Base
 ------------------------------------------------------------*/
@@ -24,7 +24,7 @@ body{
 }
 
 a {
-  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  // @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
   text-decoration: none;
 }
 
@@ -64,9 +64,10 @@ h1 {
 
 /* Header
 ------------------------------------------------------------*/
-header .top_photo {
-  max-width: 100%;
-  height: auto;
+header {
+  height: 500px;
+  background-image: url(../img/kamako.jpg);
+  background-size: cover;
 }
 
 /* main
@@ -77,12 +78,13 @@ header .top_photo {
   margin-bottom: 30px;
 }
 .box {
-  border: solid 1px skyblue;
+  border: solid 1px #b0c4de;
   margin: 10px;
   flex: 1;
 }
+
 .title_box {
-    border-bottom: solid 1px skyblue;
+    border-bottom: solid 1px #b0c4de;
 }
 .box p {
     text-align: center;
@@ -109,13 +111,15 @@ footer {
   display: block;
   color: #FFF;
   background-color: #b0c4de;
-  @include border-radius(4px);
+  // @include border-radius(4px);
 }
 
 
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
+   header  {
+     height: 250px }
+    .container {
+        flex-direction: column;
+      }
 }
 
